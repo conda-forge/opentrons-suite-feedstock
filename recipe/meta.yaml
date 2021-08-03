@@ -1,4 +1,4 @@
-{% set version = "4.4.0" %}
+{% set version = "4.5.0" %}
 
 package:
   name: opentrons-suite
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Opentrons/opentrons/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6dd85756b1c99050926abf6d518fc8179a367a8a0c53d67d170c87312419cf3f
+  sha256: 9769051125116801a37e64024b8474d65e58a75be97579cbda2ca9ed13b8d906
   patches:
     - 0001-FIX-ignore-missing-aionotify-more-properly.patch
 
@@ -16,7 +16,7 @@ build:
 outputs:
   - name: opentrons_shared_data
     script: install-shared-data.bat  # [win]
-    script: install-shared-data.sh   # [not win]
+    script: install-shared-data.sh  # [not win]
     build:
       noarch: python
     requirements:
@@ -36,7 +36,7 @@ outputs:
 
   - name: opentrons
     script: install-opentrons.bat  # [win]
-    script: install-opentrons.sh   # [not win]
+    script: install-opentrons.sh  # [not win]
     build:
       entry_points:
         - opentrons_simulate = opentrons.simulate:main
