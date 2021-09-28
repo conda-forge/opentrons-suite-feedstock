@@ -1,4 +1,4 @@
-{% set version = "4.5.0" %}
+{% set version = "4.6.0" %}
 
 package:
   name: opentrons-suite
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/Opentrons/opentrons/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 9769051125116801a37e64024b8474d65e58a75be97579cbda2ca9ed13b8d906
+  sha256: 03e2a62faae86bef881bc49c8b9e7e51b1258a069b5eeadc928c8adce2388623
 
 build:
   number: 0
