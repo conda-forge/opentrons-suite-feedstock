@@ -23,14 +23,10 @@ outputs:
         - pip
       run:
         - python >=3.7
-        - jsonschema ==3.0.2
+        - jsonschema >=3.0.2,<4.0
     test:
       imports:
         - opentrons_shared_data
-      commands:
-        - pip check
-      requires:
-        - pip
 
   - name: opentrons
     script: install-opentrons.bat  # [win]
@@ -47,7 +43,7 @@ outputs:
       run:
         - python
         - aionotify >=0.2.0  # [linux]
-        - jsonschema ==3.0.2
+        - jsonschema >=3.0.2,<4.0
         - numpy >=1.15.1
         - pydantic >=1.4
         - pyserial >=3.5
