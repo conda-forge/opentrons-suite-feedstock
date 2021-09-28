@@ -47,7 +47,7 @@ outputs:
       run:
         - python
         - aionotify >=0.2.0  # [linux]
-        - jsonschema >=3.0.2,<4
+        - jsonschema ==3.0.2
         - numpy >=1.15.1
         - pydantic >=1.4
         - pyserial >=3.5
