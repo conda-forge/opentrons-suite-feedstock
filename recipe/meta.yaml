@@ -23,7 +23,7 @@ outputs:
         - pip
       run:
         - python >=3.7
-        - jsonschema >=3.0.2,<4
+        - jsonschema ==3.0.2
     test:
       imports:
         - opentrons_shared_data
