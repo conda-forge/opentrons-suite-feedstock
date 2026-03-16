@@ -9,7 +9,7 @@ source:
   sha256: 3bcc047d3e5a6e68ed2d98e2d5e477dc981fb928b39018231ba72b939b7b4876
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: opentrons_shared_data
