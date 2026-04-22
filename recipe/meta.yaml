@@ -9,7 +9,7 @@ source:
   sha256: 3bcc047d3e5a6e68ed2d98e2d5e477dc981fb928b39018231ba72b939b7b4876
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: opentrons_shared_data
@@ -19,12 +19,14 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.7
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.7
+        - python >={{ python_min }}
         - jsonschema >=3.0.2,<4.0
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - opentrons_shared_data
 
